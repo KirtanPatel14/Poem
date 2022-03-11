@@ -7,7 +7,7 @@ public class Haiku extends Poem {
     }
 
     public int getSyllables(int k) {
-        if (k== 1 || k == 3) {
+        if (k == 1 || k == 3) {
             return 5;
         } else {
             return 7;
@@ -15,14 +15,10 @@ public class Haiku extends Poem {
     }
 
     public void printRhythm() {
-        String ta = "";
         for (int i = 1; i <= getNumlines(); i++) {
-            for (int j = 0; j < getSyllables(i); j++) {
-                ta += "ta-";
-            }
-            ta = ta.substring(0,ta.length()-1);
-            ta+="\n";
+            printTa(getSyllables(i));
+            System.out.println("ta");
         }
-        System.out.println(ta);
+            System.out.println();
+        }
     }
-}
